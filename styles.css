@@ -611,6 +611,8 @@ h1, h2, h3, h4, h5, h6, .brand-text {
 .tech-bg { background: linear-gradient(135deg, #102a43, #243b53); }
 .qs-bg { background: linear-gradient(135deg, #1b092b, #30174c); }
 .arch-bg { background: linear-gradient(135deg, #092b21, #174c3d); }
+.playme-bg { background: linear-gradient(135deg, #440000, #990000); }
+.dir-bg { background: linear-gradient(135deg, #1a1a1a, #444444); }
 
 .project-info {
     padding: 24px;
