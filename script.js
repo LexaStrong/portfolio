@@ -141,7 +141,7 @@ function initScrollInteractions() {
    Navigation Highlighting based on Scroll Section
    ========================================================================== */
 function initNavHighlighting() {
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('section, footer');
     const navLinks = document.querySelectorAll('.nav-links a');
     const dockLinks = document.querySelectorAll('.dock-item');
     
