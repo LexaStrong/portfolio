@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lexastrong.github.io/portfolio/sitemap.xml
+Sitemap: https://aakforlio.online/sitemap.xml
