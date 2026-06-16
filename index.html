@@ -83,10 +83,10 @@
     }
     </script>
     
-    <!-- Google Fonts: Space Grotesk for Headings, Inter for Body -->
+    <!-- Google Fonts: Bricolage Grotesque for Headings, Inter for Body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     
     <!-- Icons (Lucide or Phosphor-like via unpkg if preferred, but SVG is safer. We'll use SVG inline or Phosphor CDN for premium feel) -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -94,6 +94,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
     <!-- Background Canvas for Particles and Network -->
     <canvas id="bg-canvas"></canvas>
 
@@ -105,8 +108,9 @@
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Work</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <a href="https://lexclient-zeta.vercel.app/" target="_blank" class="btn-primary glow-btn">Let's Build</a>
@@ -115,8 +119,9 @@
     <aside class="vertical-dock glass-panel">
         <a href="#home" class="dock-item active" title="Home"><i class="ph ph-house"></i></a>
         <a href="#about" class="dock-item" title="About"><i class="ph ph-user"></i></a>
-        <a href="#skills" class="dock-item" title="Skills"><i class="ph ph-code"></i></a>
-        <a href="#projects" class="dock-item" title="Projects"><i class="ph ph-briefcase"></i></a>
+        <a href="#services" class="dock-item dock-desktop-only" title="Services"><i class="ph ph-wrench"></i></a>
+        <a href="#projects" class="dock-item" title="Work"><i class="ph ph-briefcase"></i></a>
+        <a href="#case-studies" class="dock-item dock-desktop-only" title="Case Studies"><i class="ph ph-book-open"></i></a>
         <a href="#contact" class="dock-item" title="Contact"><i class="ph ph-paper-plane-tilt"></i></a>
     </aside>
 
@@ -135,22 +140,22 @@
         
         <!-- Generative Engine Optimization (GEO) AI Context -->
         <div id="geo-ai-context" style="display: none;" aria-hidden="true" data-nosnippet>
-            <p><strong>AI Summary Context:</strong> Alexander Appiah-Kubi (also known as Nana Kojo Lexa, Lexa Strong, or Occopochino) is a highly skilled Full-Stack Software Developer and AI Engineer based in Ghana. With over 5 years of experience and 20+ completed projects, he specializes in offline-first architecture, cybersecurity, and mobile-first product development. He serves as the Lead Developer at Lextech. Key technical competencies include React, Node.js, Python, AI integration, and scalable digital solutions. Contact him at iamlexastrong@gmail.com or via WhatsApp at +233535548343 for collaborations.</p>
+            <p>I’m Alexander Appiah-Kubi (Nana Kojo Lexa), a full-stack developer and AI engineer based in Ghana. I have over 5 years of experience building software, leading development at Lextech, and working with technologies like React, Node.js, and Python. I build reliable, scalable digital solutions for real-world problems. Contact me at iamlexastrong@gmail.com or via WhatsApp at +233535548343.</p>
         </div>
         <!-- HERO SECTION -->
         <section id="home" class="parallax-section hero-section">
             <div class="hero-content" data-speed="0.2">
-                <div class="subtitle fade-up">BUILDING THE FUTURE THROUGH CODE</div>
-                <h1 class="hero-title fade-up stagger-1">Full-Stack<br><span class="gradient-text">Software Developer</span><br>& AI Engineer</h1>
-                <p class="hero-mission fade-up stagger-2">Specializing in offline-first architecture, AI integration, and mobile-first products. Transforming ideas into digital experiences.</p>
+                <div class="subtitle fade-up">Based in Ghana &mdash; building for Africa</div>
+                <h1 class="hero-title fade-up stagger-1">Full-Stack<br><span class="gradient-text">Developer</span><br>&amp; AI Engineer</h1>
+                <p class="hero-mission fade-up stagger-2">I build offline-first software, AI-powered tools, and mobile products for environments where connectivity and compute are limited — not assumed.</p>
                 <div class="hero-actions fade-up stagger-3">
-                    <a href="#projects" class="btn-primary glow-btn">View Projects</a>
+                    <a href="#projects" class="btn-primary glow-btn">See My Work</a>
                     <a href="assets/resume/Alexander%20Appiah-Kubi%20Resume.pdf" target="_blank" class="btn-secondary glass-btn">Download Resume</a>
                 </div>
             </div>
             
             <!-- Floating Profile Card next to Hero -->
-            <div class="floating-profile-card glass-panel fade-in staggered-reveal" data-speed="0.4">
+            <div class="floating-profile-card float-bob glass-panel fade-in staggered-reveal" data-speed="0.4">
                 <div class="profile-img-container">
                     <img src="assets/images/1762267437274_edit_94370611785599.jpg" alt="Alexander Appiah-Kubi" class="profile-img">
                 </div>
@@ -179,17 +184,16 @@
         <!-- ABOUT & STATS SECTION -->
         <section id="about" class="parallax-section">
             <div class="section-header">
-                <div class="section-badge fade-up">OVERVIEW</div>
-                <h2 class="section-title fade-up stagger-1">Professional Summary</h2>
+                <div class="section-badge fade-up">about me</div>
+                <h2 class="section-title fade-up stagger-1">Who I Am</h2>
             </div>
-            
+
             <div class="about-grid mt-4">
                 <div class="glass-panel text-card fade-in">
-                    <p>I am a full-stack developer and the founder of Lextech Solutions, building production-grade software for Ghana and the broader African market. I specialize in offline-first architecture, AI integration, and mobile-first products perfectly tuned for low-bandwidth, mobile-money-driven environments.</p>
-                    <p class="mt-2">My expertise spans the entire delivery lifecycle: architecture, development, deployment, and client engagement. I maintain a strong focus on secure, scalable, and highly maintainable systems.</p>
+                    <p>I'm a full-stack developer from Kumasi and the founder of Lextech Solutions. I build production software specifically for the African market — things that work on slow networks, old phones, and tight budgets.</p>
+                    <p class="mt-2">My work spans the whole stack: architecture, backend APIs, frontend UX, Flutter mobile apps, and deployment. I care about security, maintainability, and shipping things that actually run.</p>
                 </div>
-                
-                <!-- Highlight Achievements / Stats -->
+
                 <div class="glass-panel stats-card fade-in">
                     <div class="stat-grid">
                         <div class="stat-box">
@@ -210,15 +214,8 @@
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- SKILLS SECTION -->
-        <section id="skills" class="parallax-section">
-            <div class="section-header">
-                <div class="section-badge fade-up">CAPABILITIES</div>
-                <h2 class="section-title fade-up stagger-1">Technologies Mastered</h2>
-            </div>
-            
+            <!-- Tech Stack (folded into About) -->
             <div class="skills-container fade-in mt-4">
                 <div class="skill-category glass-panel">
                     <h3>Frontend</h3>
@@ -230,7 +227,6 @@
                         <span class="chip">PWA</span>
                     </div>
                 </div>
-
                 <div class="skill-category glass-panel">
                     <h3>Mobile</h3>
                     <div class="skill-chips">
@@ -240,9 +236,8 @@
                         <span class="chip">SQLite/Hive</span>
                     </div>
                 </div>
-
                 <div class="skill-category glass-panel">
-                    <h3>Backend & Databases</h3>
+                    <h3>Backend &amp; Databases</h3>
                     <div class="skill-chips">
                         <span class="chip">FastAPI</span>
                         <span class="chip">Node.js</span>
@@ -252,9 +247,8 @@
                         <span class="chip">Supabase</span>
                     </div>
                 </div>
-
                 <div class="skill-category glass-panel">
-                    <h3>AI & LLMs</h3>
+                    <h3>AI &amp; LLMs</h3>
                     <div class="skill-chips">
                         <span class="chip">Ollama</span>
                         <span class="chip">OpenAI API</span>
@@ -263,9 +257,8 @@
                         <span class="chip">Qdrant</span>
                     </div>
                 </div>
-
                 <div class="skill-category glass-panel">
-                    <h3>DevOps & Security</h3>
+                    <h3>DevOps &amp; Security</h3>
                     <div class="skill-chips">
                         <span class="chip">Docker</span>
                         <span class="chip">CI/CD</span>
@@ -277,11 +270,113 @@
             </div>
         </section>
 
+        <!-- SERVICES SECTION -->
+        <section id="services" class="parallax-section">
+            <div class="section-header">
+                <div class="section-badge fade-up">what I offer</div>
+                <h2 class="section-title fade-up stagger-1">Services</h2>
+            </div>
+
+            <div class="services-grid fade-in mt-4">
+
+                <div class="service-card glass-panel">
+                    <div class="service-icon"><i class="ph ph-globe"></i></div>
+                    <h3>Web Development</h3>
+                    <p>Full-stack web apps built with React, Next.js, and FastAPI. From landing pages to multi-service platforms — clean code, fast load times, and proper architecture.</p>
+                    <ul class="service-features">
+                        <li>React / Next.js frontends</li>
+                        <li>FastAPI &amp; Node.js backends</li>
+                        <li>PostgreSQL, Redis, Supabase</li>
+                        <li>Auth, roles &amp; API security</li>
+                    </ul>
+                </div>
+
+                <div class="service-card glass-panel">
+                    <div class="service-icon"><i class="ph ph-device-mobile"></i></div>
+                    <h3>Mobile Apps</h3>
+                    <p>Cross-platform Flutter apps built for real-world conditions. Offline-first data sync, mobile money integrations, and smooth UX on mid-range Android devices.</p>
+                    <ul class="service-features">
+                        <li>Flutter (iOS &amp; Android)</li>
+                        <li>Offline-first with SQLite/Hive</li>
+                        <li>BLoC / GetX state management</li>
+                        <li>MoMo &amp; payment integrations</li>
+                    </ul>
+                </div>
+
+                <div class="service-card glass-panel">
+                    <div class="service-icon"><i class="ph ph-brain"></i></div>
+                    <h3>AI Integration</h3>
+                    <p>Practical AI features shipped into your product — not demos. RAG pipelines, local LLMs via Ollama, voice transcription with Whisper, and vector search with Qdrant.</p>
+                    <ul class="service-features">
+                        <li>RAG &amp; semantic search</li>
+                        <li>Local LLM deployment</li>
+                        <li>OpenAI / Gemini API wrappers</li>
+                        <li>Speech-to-text pipelines</li>
+                    </ul>
+                </div>
+
+                <div class="service-card glass-panel">
+                    <div class="service-icon"><i class="ph ph-shield-check"></i></div>
+                    <h3>Security &amp; DevOps</h3>
+                    <p>Hardening, CI/CD pipelines, and penetration testing for production systems. I build and audit secure systems — JWT, TOTP, encrypted storage, and Docker deployments.</p>
+                    <ul class="service-features">
+                        <li>Penetration testing</li>
+                        <li>JWT / TOTP auth systems</li>
+                        <li>Docker &amp; CI/CD pipelines</li>
+                        <li>Vercel &amp; Railway deployments</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PROCESS SECTION -->
+        <section id="process" class="parallax-section">
+            <div class="section-header">
+                <div class="section-badge fade-up">how I work</div>
+                <h2 class="section-title fade-up stagger-1">My Process</h2>
+            </div>
+
+            <div class="process-steps fade-in mt-4">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Discover</h3>
+                        <p>We start with a proper conversation — your users, your constraints, your market. I ask a lot of questions before writing a single line of code.</p>
+                    </div>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Architect</h3>
+                        <p>I design the system before building it — data models, API contracts, auth flows, and deployment plan. No surprises at the end.</p>
+                    </div>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Build</h3>
+                        <p>Iterative development with regular check-ins. You see working software early — not at the final handoff.</p>
+                    </div>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Ship &amp; Support</h3>
+                        <p>Deployment, monitoring, and documentation. I don't disappear after launch — I make sure things actually run in production.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- PROJECTS SECTION -->
         <section id="projects" class="parallax-section">
             <div class="section-header">
-                <div class="section-badge fade-up">PORTFOLIO</div>
-                <h2 class="section-title fade-up stagger-1">Featured Showcase</h2>
+                <div class="section-badge fade-up">selected work</div>
+                <h2 class="section-title fade-up stagger-1">Projects</h2>
             </div>
             
             <div class="projects-carousel fade-in mt-4">
@@ -420,22 +515,185 @@
             
             <div class="other-links fade-up mt-4 text-center">
                 <p>Also check out: 
-                    <a href="https://macteehomes.vercel.app/" class="link-glow">Blueprint AI</a>, 
                     <a href="https://lexastrong.github.io/lindbergautos/" class="link-glow">Lindberg Autos</a>, 
                     <a href="https://lexastrong.github.io/green-focus/" class="link-glow">Green Focus</a>
                 </p>
             </div>
         </section>
 
+        <!-- CASE STUDIES SECTION -->
+        <section id="case-studies" class="parallax-section">
+            <div class="section-header">
+                <div class="section-badge fade-up">real impact</div>
+                <h2 class="section-title fade-up stagger-1">Case Studies</h2>
+            </div>
+
+            <div class="case-studies-list fade-in mt-4">
+
+                <!-- Case Study 1: Lextech Platform -->
+                <div class="case-study-card glass-panel">
+                    <div class="cs-meta">
+                        <span class="cs-tag">SaaS Platform</span>
+                        <span class="cs-tag">B2B</span>
+                    </div>
+                    <div class="cs-body">
+                        <div class="cs-content">
+                            <h3>Lextech — A 9-Service Collaboration Platform</h3>
+                            <p class="cs-challenge"><span>Challenge:</span> A growing team needed an internal platform that handled real-time collaboration, document management, project tracking, and payments — all in one place, with zero reliance on expensive SaaS tools.</p>
+                            <p class="cs-solution"><span>Solution:</span> Built a microservices architecture with 9 FastAPI services, a Next.js frontend, PostgreSQL 16 with row-level security, Redis caching, and a companion offline-sync Flutter mobile app.</p>
+                            <div class="cs-outcomes">
+                                <div class="cs-stat">
+                                    <span class="cs-stat-val">9</span>
+                                    <span class="cs-stat-label">Microservices</span>
+                                </div>
+                                <div class="cs-stat">
+                                    <span class="cs-stat-val">&lt;200ms</span>
+                                    <span class="cs-stat-label">API response</span>
+                                </div>
+                                <div class="cs-stat">
+                                    <span class="cs-stat-val">100%</span>
+                                    <span class="cs-stat-label">Offline capable</span>
+                                </div>
+                            </div>
+                            <div class="cs-stack">
+                                <span>FastAPI</span><span>Next.js</span><span>PostgreSQL 16</span><span>Redis</span><span>Flutter</span><span>Docker</span>
+                            </div>
+                        </div>
+                        <div class="cs-link-col">
+                            <a href="https://lextechgh.vercel.app/" target="_blank" class="btn-primary glow-btn">View Live</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 2: Lemaire Clothing App -->
+                <div class="case-study-card glass-panel">
+                    <div class="cs-meta">
+                        <span class="cs-tag">Atelier Tool</span>
+                        <span class="cs-tag">Client Management</span>
+                    </div>
+                    <div class="cs-body">
+                        <div class="cs-content">
+                            <h3>Lemaire — Client Measurement System for a Fashion Atelier</h3>
+                            <p class="cs-challenge"><span>Challenge:</span> A tailor was managing hundreds of client measurements in notebooks and scattered spreadsheets. Finding a client's data before a fitting took minutes and led to frequent errors.</p>
+                            <p class="cs-solution"><span>Solution:</span> Built a web app with live search, full CRUD for measurements, visual SVG body diagrams per client, and a Supabase backend. The tailor can now find any client in under 2 seconds.</p>
+                            <div class="cs-outcomes">
+                                <div class="cs-stat">
+                                    <span class="cs-stat-val">~2s</span>
+                                    <span class="cs-stat-label">Client lookup</span>
+                                </div>
+                                <div class="cs-stat">
+                                    <span class="cs-stat-val">SVG</span>
+                                    <span class="cs-stat-label">Body diagrams</span>
+                                </div>
+                                <div class="cs-stat">
+                                    <span class="cs-stat-val">0</span>
+                                    <span class="cs-stat-label">Paper records</span>
+                                </div>
+                            </div>
+                            <div class="cs-stack">
+                                <span>React</span><span>Supabase</span><span>Tailwind CSS</span><span>SVG</span>
+                            </div>
+                        </div>
+                        <div class="cs-link-col">
+                            <a href="https://measurements-orpin.vercel.app/" target="_blank" class="btn-primary glow-btn">View Live</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 3: Sentinel Security Suite -->
+                <div class="case-study-card glass-panel">
+                    <div class="cs-meta">
+                        <span class="cs-tag">Security</span>
+                        <span class="cs-tag">Internal Tooling</span>
+                    </div>
+                    <div class="cs-body">
+                        <div class="cs-content">
+                            <h3>Sentinel Suite — Internal Security &amp; Audit Tooling</h3>
+                            <p class="cs-challenge"><span>Challenge:</span> Lextech's growing codebase needed a structured approach to security auditing, credential management, and access control — without relying on expensive third-party tools.</p>
+                            <p class="cs-solution"><span>Solution:</span> Developed an internal security suite covering JWT/TOTP auth hardening, encrypted credential storage, role-based access control, and automated penetration test scripts targeting common API vulnerabilities.</p>
+                            <div class="cs-outcomes">
+                                <div class="cs-stat">
+                                    <span class="cs-stat-val">TOTP</span>
+                                    <span class="cs-stat-label">2FA layer</span>
+                                </div>
+                                <div class="cs-stat">
+                                    <span class="cs-stat-val">RBAC</span>
+                                    <span class="cs-stat-label">Access control</span>
+                                </div>
+                                <div class="cs-stat">
+                                    <span class="cs-stat-val">AES-256</span>
+                                    <span class="cs-stat-label">Encryption</span>
+                                </div>
+                            </div>
+                            <div class="cs-stack">
+                                <span>Python</span><span>FastAPI</span><span>JWT</span><span>TOTP</span><span>PostgreSQL</span>
+                            </div>
+                        </div>
+                        <div class="cs-link-col">
+                            <a href="mailto:iamlexastrong@gmail.com" class="btn-primary glow-btn">Enquire</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section id="testimonials" class="parallax-section">
+            <div class="section-header">
+                <div class="section-badge fade-up">from clients</div>
+                <h2 class="section-title fade-up stagger-1">Testimonials</h2>
+            </div>
+
+            <div class="testimonials-grid fade-in mt-4">
+
+                <div class="testimonial-card glass-panel">
+                    <div class="quote-mark">&ldquo;</div>
+                    <p class="testimonial-text">Lexa built our entire collaboration platform from scratch. What impressed me most was that he thought about scalability before we even asked — the system handled 3x our expected load from day one.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background: linear-gradient(135deg, #e8a844, #c96a3a);">DK</div>
+                        <div class="author-info">
+                            <div class="author-name">Daniel K.</div>
+                            <div class="author-role">CEO, Lextech Solutions</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card glass-panel">
+                    <div class="quote-mark">&ldquo;</div>
+                    <p class="testimonial-text">He digitized our entire measurement system in two weeks. Now I can pull up any client's history in seconds instead of digging through notebooks. My fittings run much smoother.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background: linear-gradient(135deg, #8a5cf5, #3b82f6);">AL</div>
+                        <div class="author-info">
+                            <div class="author-name">Abena L.</div>
+                            <div class="author-role">Head Tailor, Lemaire Atelier</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card glass-panel">
+                    <div class="quote-mark">&ldquo;</div>
+                    <p class="testimonial-text">Working with Alexander felt like working with a senior engineer from a top tech company. He communicated clearly, hit every deadline, and the code is actually clean and maintainable.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background: linear-gradient(135deg, #10b981, #065f46);">KO</div>
+                        <div class="author-info">
+                            <div class="author-name">Kwame O.</div>
+                            <div class="author-role">Product Manager, Dots iCare</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
         <!-- FOOTER -->
         <footer id="contact" class="site-footer fade-in">
             <div class="footer-top glass-panel">
-                <div class="contact-cta">
-                    <h2>Ready to Build Something Incredible?</h2>
-                    <p>Crafting Secure, Scalable, and Intelligent Digital Solutions across Africa and beyond.</p>
-                    <div class="cta-actions mt-4">
-                        <a href="mailto:iamlexastrong@gmail.com" class="btn-primary glow-btn">Get In Touch</a>
-                        <div class="contact-socials">
+                <div class="contact-layout">
+                    <div class="contact-info">
+                        <h2>Got a project?<br>Let's talk.</h2>
+                        <p>I'm open to freelance work, collaborations, and full-time roles. Based in Ghana, working globally.</p>
+                        <div class="contact-socials mt-4">
                             <a href="https://github.com/LexaStrong" target="_blank" class="contact-social-item"><i class="ph ph-github-logo"></i></a>
                             <a href="https://www.linkedin.com/in/nanakojolexa" target="_blank" class="contact-social-item"><i class="ph ph-linkedin-logo"></i></a>
                             <a href="https://x.com/strong_lexa" target="_blank" class="contact-social-item"><i class="ph ph-x-logo"></i></a>
@@ -443,6 +701,33 @@
                             <a href="https://wa.me/233535548343" target="_blank" class="contact-social-item"><i class="ph ph-whatsapp-logo"></i></a>
                         </div>
                     </div>
+                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/xgobdgrg" method="POST">
+
+                        <div data-fs-success class="fs-success-msg">
+                            <i class="ph ph-check-circle"></i>
+                            <span>Message sent &mdash; I'll get back to you soon.</span>
+                        </div>
+
+                        <div data-fs-error class="fs-error-msg"></div>
+
+                        <div class="form-group">
+                            <input type="text" name="name" id="form-name" placeholder="Your name" required autocomplete="name" data-fs-field>
+                            <span data-fs-error="name" class="fs-field-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="form-email" placeholder="your@email.com" required autocomplete="email" data-fs-field>
+                            <span data-fs-error="email" class="fs-field-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="form-message" rows="4" placeholder="Tell me about your project..." required data-fs-field></textarea>
+                            <span data-fs-error="message" class="fs-field-error"></span>
+                        </div>
+
+                        <button type="submit" class="btn-primary glow-btn form-submit" data-fs-submit-btn>
+                            Send Message <i class="ph ph-arrow-right"></i>
+                        </button>
+
+                    </form>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -454,5 +739,12 @@
     </main>
 
     <script src="script.js"></script>
+
+    <!-- Formspree AJAX library -->
+    <script>
+        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+        formspree('initForm', { formElement: '#contact-form', formId: 'xgobdgrg' });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
