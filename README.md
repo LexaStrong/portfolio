@@ -1,53 +1,62 @@
-# Alexander Appiah-Kubi (Lexa Strong) | Premium Portfolio
+# Alexander Appiah-Kubi | Systems Engineering & Production Portfolio
 
-Professional portfolio of **Alexander Appiah-Kubi**, also known as **Lexa Strong** (Nana Kojo Lexa), a Full-Stack Software Developer and AI Engineer based in Accra, Ghana.
+Professional portfolio of **Alexander Appiah-Kubi** (Nana Kojo Lexa), Full-Stack Software Developer and AI Systems Engineer based in Kumasi, Ghana. Founder and Lead Developer at Lextech Solutions.
 
-![Portfolio Preview](assets/images/1762267437274_edit_94370611785599.jpg)
+## Architecture & Focus
 
-## 🚀 Overview
+High-performance, accessibility-focused engineering portfolio designed with a bespoke design system and vanilla technologies for zero-overhead client rendering, sub-second loads, and high SEO/GEO visibility.
 
-This portfolio is a high-performance, dark-themed showcase of production-grade digital solutions. It features a custom design built with vanilla technologies to ensure maximum speed, accessibility, and SEO efficiency.
+### Key Engineering Features
+- **Restrained Brand Palette & Contrast**: Deep obsidian surfaces (`#090d16`), distinct elevation layers, and high-contrast typography meeting WCAG AAA standards.
+- **Bespoke Design System**: Tokenized 8pt spacing scale, solid surface hierarchy, and high-tactile interactive states.
+- **Content-Driven Layouts**: Structured architectural pillars, quantitative system telemetry, and deep-dive case studies with verifiable outcomes.
+- **Meaningful Interactions**: Instant project category filtering, one-click email clipboard copy, and subtle scroll reveal observers respecting `prefers-reduced-motion`.
+- **Search Engine & Generative AI Optimization**: Structured JSON-LD Person and FAQ schemas, canonical tags, and Open Graph cards.
 
-### Key Features:
-- **Glassmorphism UI**: Modern aesthetic with frosted glass panels and neon accents.
-- **Dynamic Particle Background**: interactive network animation using HTML5 Canvas.
-- **Featured Showcase**: Live previews of major projects (Lextech, PlayMe, etc.) via iframe integration.
-- **Responsive Navigation**: Mobile-first design with a custom floating vertical dock.
-- **SEO Optimized**: Advanced metadata, Open Graph support, and semantic HTML structure.
+## Primary Production Stack
 
-## 🛠️ Tech Stack
+Alexander's core engineering capabilities and production stack include:
 
-- **Core**: HTML5, Vanilla CSS3, JavaScript (ES6+)
-- **Animations**: CSS Transitions, Intersection Observer API, Canvas API
-- **Icons**: Phosphor Icons
-- **Typography**: Space Grotesk & Inter (Google Fonts)
+- **Basic Web Development**: Semantic HTML5, responsive CSS3 (Flexbox, CSS Grid, custom tokens), modern JavaScript (ESNext, DOM APIs, async workflows).
+- **The MERN Stack**: MongoDB (NoSQL document store), Express.js (REST APIs, middleware), React 18 (component architecture, hooks, state), Node.js (asynchronous server runtime).
+- **Mobile & Native**: Kotlin (native Android development and architecture), Flutter / Dart (cross-platform offline-first mobile apps).
+- **Databases & ORMs**:
+  - **PostgreSQL 16**: Relational schema modeling, index optimization, ACID compliance, Row-Level Security (RLS).
+  - **Prisma ORM**: Type-safe database queries, schema declarations, and automated migrations.
+  - **NoSQL**: MongoDB document collections and Redis in-memory key-value caching.
+- **Containerization & DevOps**: Docker, Docker Compose for multi-container orchestration, multi-stage container builds, CI/CD pipelines, and secure cloud deployments.
 
-## 📁 Directory Structure
+## Portfolio Implementation Stack
+
+- **Core**: Semantic HTML5, Vanilla CSS3 (Custom Design Tokens), JavaScript (ESNext)
+- **Icons**: Selective Phosphor Icons
+- **Typography**: Plus Jakarta Sans & JetBrains Mono (Google Fonts)
+- **Integrations**: Formspree AJAX Form Handling
+
+## Directory Structure
 
 ```text
-├── assets/             # Media, Resume, and Logos
-├── index.html          # Main entry point
-├── script.js           # Navigation & Animation logic
-├── styles.css          # Design system & Styling
-├── sitemap.xml         # SEO sitemap
-└── robots.txt          # Crawler instructions
+├── assets/             # Media assets, photography, and engineering resume
+├── index.html          # Main application and semantic structure
+├── script.js           # Client filtering, navigation, and telemetry interactions
+├── styles.css          # Design system tokens, typography scale, and components
+├── sitemap.xml         # XML sitemap
+└── robots.txt          # Crawler directives
 ```
 
-## 🏗️ Development
+## Local Development
 
-To run this project locally:
+Open `index.html` directly in any modern browser, or launch a local static server:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/LexaStrong/portfolio.git
-   ```
-2. Open `index.html` in your browser or run a local server:
-   ```bash
-   # Using Python
-   python -m http.server 8000
-   ```
+```bash
+# Using Python
+python -m http.server 8000
 
-## 📧 Contact
+# Using Node.js
+npx serve .
+```
+
+## Contact Channels
 
 - **Email**: iamlexastrong@gmail.com
 - **LinkedIn**: [nanakojolexa](https://www.linkedin.com/in/nanakojolexa)
