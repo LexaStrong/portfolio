@@ -1528,3 +1528,88 @@ button {
         transform: none !important;
     }
 }
+
+/* ==========================================================================
+   Page Preloader (From Uiverse.io by FazlahmadHotaki)
+   ========================================================================== */
+.page-preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--surface-canvas, #090d16);
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.page-preloader.loaded {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* From Uiverse.io by FazlahmadHotaki */ 
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  overflow: visible;
+}
+
+.track,
+.car {
+  fill: none;
+  stroke-width: 2.5;
+}
+
+.track {
+  stroke: #d0d0d0;
+}
+
+.car {
+  stroke: #4f8cff;
+  stroke-linecap: round;
+  stroke-dasharray: 25 75;
+  animation: borderMove 2s linear infinite;
+}
+
+.keys rect {
+  fill: #666;
+  animation: typing 1.2s infinite;
+}
+
+.keys rect:nth-child(2n) {
+  animation-delay: 0.15s;
+}
+
+.keys rect:nth-child(3n) {
+  animation-delay: 0.3s;
+}
+
+.keys rect:nth-child(4n) {
+  animation-delay: 0.45s;
+}
+
+@keyframes borderMove {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes typing {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+

@@ -4,6 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    initPagePreloader();
     initScrollProgress();
     initActiveNavObserver();
     initProjectFiltering();
@@ -170,4 +171,24 @@ function initFormRedirect() {
     });
 
     observer.observe(successEl, { attributes: true, attributeFilter: ['hidden'] });
+}
+
+/* ==========================================================================
+   Page Preloader Dismissal
+   ========================================================================== */
+function initPagePreloader() {
+    const preloader = document.getElementById('page-preloader');
+    if (!preloader) return;
+
+    const dismiss = () => {
+        preloader.classList.add('loaded');
+        setTimeout(() => {
+            if (preloader.parentNode) {
+                preloader.parentNode.removeChild(preloader);
+            }
+        }, 500);
+    };
+
+    // Render loader for 7 seconds
+    setTimeout(dismiss, 7000);
 }
